@@ -4,5 +4,6 @@ export CURRENT_UID=$(id -u):$(id -g)
 
 alias dc="docker-compose"
 alias build="dc build && dr npm install"
-alias up="dc down && dc up"
+alias down="dc down"
+alias up="down && dc up"
 alias dr="dc run \$SERVICE_NAME"
