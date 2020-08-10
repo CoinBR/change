@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <GiveChange numberOfToPayFields=4/>
+    <give-change :numberOfToPayFields="4">
+    </give-change>
   </div>
 </template>
 
@@ -10,7 +11,7 @@ import GiveChange from './components/GiveChange.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    GiveChange
   }
 }
 </script>

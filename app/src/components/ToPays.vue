@@ -1,6 +1,9 @@
 <template>
 <div>
-  <div v-for="toPay in toPays" :key="toPay.i">
+  <div v-for="toPay in fields" :key="toPay.i">
+    <label>Valor à Pagar:
+      <input type="number" v-model="toPay.value">
+    </label>
   </div>
 </div>
 </template>
@@ -15,6 +18,7 @@ function getResetToPays(numOfFields){
     }
   })
 }
+
 
 export default {
   name: 'ToPays',
