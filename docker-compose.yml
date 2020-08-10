@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  app:
+    build: .
+    user: ${CURRENT_UID}
+    environment:
+      - TZ='America/Recife'
+    working_dir: /app/
+    volumes:
+      - ./app/:/app/
+    command: "bash"
+    ports:
+      - 8005:8005
