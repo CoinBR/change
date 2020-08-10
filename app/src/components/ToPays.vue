@@ -2,7 +2,7 @@
 <div>
   <div v-for="toPay in fields" :key="toPay.i">
     <label>Valor à Pagar:
-      <input type="number" v-model="toPay.value">
+      <input type="number" v-model="toPay.value | currency">
     </label>
   </div>
 </div>
@@ -29,6 +29,12 @@ export default {
  
   data(){ return {
     fields: getResetToPays(this.numberOfToPayFields),
-  }}
+  }},
+
+  filters: {
+    currency(value){
+      return parseFloat(value).toFixed(2);
+    }
+  }
 }
 </script>

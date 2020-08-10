@@ -27,7 +27,29 @@ describe('ToPays', () => {
       { i: 4, value: 0 },
       { i: 5, value: 0 },
       { i: 6, value: 0 },
-      { i: 7, value: 0 },
+      { i: 7, value: 0 }
     ])
   })
+/*
+  it('formats the fields with currency', () => {
+    const wrapper = mount(ToPays, {
+      propsData: { numberOfToPayFields: 2 }
+    })
+
+    wrapper.setData({
+      fields: [
+        { i: 1, value: 1.11 },
+        { i: 2, value: 2500.22 }
+      ]
+    })
+
+    expect(wrapper.text())
+      .toContain('1.11')
+      .toContain('2500.22')
+
+
+
+
+  })
+  */
 })
