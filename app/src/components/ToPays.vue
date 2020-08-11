@@ -1,11 +1,13 @@
 <template>
-<div>
-  <currency-input v-for="toPay in fields"
-          :key="toPay.i"
-          v-model="toPay.value" 
-          class="input is-medium currency-input"
-          />
-</div>
+    <b-message title="Conta do Cliente"
+               :closable="false"
+               class="to-pays">
+    <currency-input v-for="toPay in fields"
+            :key="toPay.i"
+            v-model="toPay.value" 
+            class="input is-medium currency-input"
+            />
+  </b-message>
 </template>
 
 <script>
@@ -32,3 +34,11 @@ export default {
   }},
 }
 </script>
+
+<style scoped>
+.to-pays{
+  margin: auto;
+  max-width: 45rem;
+  text-align: center;
+}
+</style>
