@@ -1,13 +1,13 @@
 <template>
-    <b-message title="Conta do Cliente"
-               :closable="false"
-               class="to-pays">
+<b-message title="Conta do Cliente"
+           :closable="false"
+           class="to-pays">
     <currency-input v-for="toPay in fields"
             :key="toPay.i"
             v-model="toPay.value" 
             class="input is-medium currency-input"
             />
-  </b-message>
+</b-message>
 </template>
 
 <script>
