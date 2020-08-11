@@ -34,6 +34,11 @@ function getResetMoneyData() {
 export default {
     data(){ return {
         money: getResetMoneyData() 
-    }}   
+    }},
+    computed: {
+        allMoney(){
+            return this.money.coins.concat(this.money.bills)
+        }
+    }  
 }
 </script>
