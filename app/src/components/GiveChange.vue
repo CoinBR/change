@@ -23,3 +23,11 @@ export default {
   }}
 }
 </script>
+
+<style>
+.currency-input{
+ max-width: 12ch;
+ margin: 1rem;
+}
+
+</style>

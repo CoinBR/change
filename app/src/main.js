@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueCurrencyInput from 'vue-currency-input'
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
 
 import App from './App.vue'
 
@@ -15,6 +17,7 @@ const CurrencyInputPluginOptions = {
 }
 
 Vue.use(VueCurrencyInput, CurrencyInputPluginOptions)
+Vue.use(Buefy)
 
 Vue.config.productionTip = false
 

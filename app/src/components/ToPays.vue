@@ -1,8 +1,10 @@
 <template>
 <div>
   <currency-input v-for="toPay in fields"
-                 :key="toPay.i"
-                 v-model="toPay.value" />
+          :key="toPay.i"
+          v-model="toPay.value" 
+          class="input is-medium currency-input"
+          />
 </div>
 </template>
 
