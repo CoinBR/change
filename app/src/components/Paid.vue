@@ -14,16 +14,21 @@ import { Message } from 'buefy'
 Vue.use(Message)
 
 function getResetMoneyData() {
-    const bills = [2, 5, 10, 20, 50, 100, 200]
-    const coins = [5, 10, 25, 50, 100]
+    const billsValues = [2, 5, 10, 20, 50, 100, 200]
+    const coinsValues= [5, 10, 25, 50, 100]
     
-    const billsData = bills.map( (v) => {
+    const bills = billsValues.map( (v) => {
         return { value: v * 100, qty: 0 }
     })
 
-    const coinsData = bills.map( (v) => {
+    const coins = coinsValues.map( (v) => {
         return { value: v, qty: 0 }
     })
+
+    return {
+        bills,
+        coins
+    } 
 }
 
 export default {
