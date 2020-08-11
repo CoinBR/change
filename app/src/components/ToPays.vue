@@ -11,6 +11,23 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import 'buefy/dist/buefy.css'
+import { Message } from 'buefy'
+import VueCurrencyInput from 'vue-currency-input'
+
+const CurrencyInputPluginOptions = {
+  globalOptions: {
+    currency: 'BRL',
+    locale: 'pt-BR',
+    'auto-decimal-mode': false,
+    'distraction-free': true,
+    'value-as-integer': true,
+    'allow-negative': false
+  }
+}
+Vue.use(VueCurrencyInput, CurrencyInputPluginOptions)
+Vue.use(Message)
 
 function getResetToPays(numOfFields){
   return [...Array(numOfFields).keys()].map( (i) => {
