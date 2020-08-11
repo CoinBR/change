@@ -1,10 +1,8 @@
 <template>
 <div>
-  <div v-for="toPay in fields" :key="toPay.i">
-    <label>Valor à Pagar:
-      <input type="number" v-model="toPay.value | currency">
-    </label>
-  </div>
+  <currency-input v-for="toPay in fields"
+                 :key="toPay.i"
+                 v-model="toPay.value" />
 </div>
 </template>
 
@@ -19,7 +17,6 @@ function getResetToPays(numOfFields){
   })
 }
 
-
 export default {
   name: 'ToPays',
   
@@ -28,13 +25,8 @@ export default {
   },
  
   data(){ return {
+    tst: 1,
     fields: getResetToPays(this.numberOfToPayFields),
   }},
-
-  filters: {
-    currency(value){
-      return parseFloat(value).toFixed(2);
-    }
-  }
 }
 </script>
