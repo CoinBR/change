@@ -1,18 +1,21 @@
 <template>
 <div class="give-change">
   <h1 class="title">Passar Troco!</h1>
-  <to-pays :numberOfToPayFields="numberOfToPayFields">
-  </to-pays>
+  <to-pays :numberOfToPayFields="numberOfToPayFields" />
+  <paid />
 </div>
 </template>
 
 <script>
 import ToPays from './ToPays.vue'
+import Paid from './Paid.vue'
+
 
 export default {
   name: 'GiveChange',
   components: {
     ToPays,
+    Paid,
   },
   
   props: {
@@ -32,7 +35,13 @@ export default {
 
 .give-change{
   max-width: 70rem;
+  margin: auto;
   text-align: center;
 }
+
+.give-change > * + *  {
+  margin-top: 3rem;
+}
+
 
 </style>

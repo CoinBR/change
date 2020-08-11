@@ -1,5 +1,5 @@
 <template>
-<b-message title="Conta do Cliente"
+<b-message title="Valor(es) que o Cliente vai pagar"
            :closable="false"
            class="to-pays">
     <currency-input v-for="toPay in fields"
