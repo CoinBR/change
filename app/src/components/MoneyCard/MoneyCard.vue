@@ -2,7 +2,8 @@
 <div class="card money-card">
   <div class="card-image">
     <figure class="image">
-      <img :src="require(`./assets/imgs/money/${value}.jpg`)" 
+      <img @click="qty++"
+           :src="require(`./assets/imgs/money/${value}.jpg`)" 
            :alt="value"
            class="money-card-img"
            >
