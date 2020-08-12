@@ -55,16 +55,18 @@ export default {
 .paid{
     margin-left: auto;
     margin-right: auto;
-    max-width: fit-content;
+    width: fit-content;
 }
 
 .money-group{
     display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
     margin-top: 1rem;
 }
 
-.money-group > * + *{
-    margin-left: 1rem;
+.money-group > * {
+    margin: 0.5rem;
 }
 
 </style>
