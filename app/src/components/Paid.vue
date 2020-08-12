@@ -2,8 +2,10 @@
 <b-message title="Dinheiro que o Cliente te entregou"
            :closable="false"
            class="paid">
-    <div>
-        <money-card v-for="bill in money.bills" :key="money.value" />
+    <div class="money-group">
+        <money-card v-for="bill in money.bills" 
+                    :key="money.value"
+                    :value="bill.value" />
     </div>
 </b-message>
 </template>
@@ -13,7 +15,7 @@ import Vue from 'vue'
 import 'buefy/dist/buefy.css'
 import { Message } from 'buefy'
 
-import MoneyCard from './MoneyCard.vue'
+import MoneyCard from './MoneyCard/MoneyCard.vue'
 
 Vue.use(Message)
 
@@ -47,3 +49,20 @@ export default {
     components: { MoneyCard }
 }
 </script>
+<style scoped>
+
+.paid{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+}
+
+.money-group{
+    display: flex;
+}
+
+.money-group > * + *{
+    margin-left: 1rem;
+}
+
+</style>

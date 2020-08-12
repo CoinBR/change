@@ -34,7 +34,7 @@ export default {
 }
 
 .give-change{
-  max-width: 70rem;
+  width: 100%;
   margin: auto;
   text-align: center;
 }
