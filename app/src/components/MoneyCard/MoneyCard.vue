@@ -58,12 +58,13 @@ export default {
 
 .money-card{
   width: 12rem;
-  padding: 0.7rem 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 .money-card-img{
   object-fit: contain;
   height: 5rem;
+  padding: 0.6rem 0px 0px 0px;
 }
 
 </style>
