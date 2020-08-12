@@ -62,11 +62,29 @@ export default {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    margin-top: 1rem;
+    margin-top: 0px;
+}
+
+.money-group + .money-group{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-top: 1em;
 }
 
 .money-group > * {
-    margin: 0.5rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
 }
+
+
+
+.money-group{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
+
 
 </style>
