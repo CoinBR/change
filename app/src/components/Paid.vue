@@ -2,10 +2,11 @@
 <b-message title="Dinheiro que o Cliente te entregou"
            :closable="false"
            class="paid">
-    <div class="money-group">
-        <money-card v-for="bill in money.bills" 
-                    :key="money.value"
-                    :value="bill.value" />
+    <div v-for="moneyType in ['bills', 'coins']"
+     class="money-group">
+        <money-card v-for="mn in money[moneyType]" 
+                    :key="mn.value"
+                    :value="mn.value" />
     </div>
 </b-message>
 </template>
@@ -21,7 +22,7 @@ Vue.use(Message)
 
 function getResetMoneyData() {
     const billsValues = [2, 5, 10, 20, 50, 100, 200]
-    const coinsValues= [5, 10, 25, 50, 100]
+    const coinsValues = [5, 10, 25, 50, 100].reverse()
     
     const bills = billsValues.map( (v) => {
         return { value: v * 100, qty: 0 }
@@ -59,6 +60,7 @@ export default {
 
 .money-group{
     display: flex;
+    margin-top: 1rem;
 }
 
 .money-group > * + *{
